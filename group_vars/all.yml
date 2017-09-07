@@ -7,7 +7,7 @@ ansible_ssh_user: root
 # Kubernetes services will get fake IP addresses from this range.
 # This range must not conflict with anything in your infrastructure. These
 # addresses do not need to be routable and must just be an unused block of space.
-kube_service_addresses: 10.254.0.0/16
+kube_service_addresses: 172.31.0.0/16
 
 # Flannel internal network (optional). When flannel is used, it will assign IP
 # addresses from this range to individual pods.
@@ -40,7 +40,7 @@ dns_domain: kube.local
 # the range specified as kube_service_addresses above.
 # And this is the IP address you should use as address of the DNS server
 # in your containers.
-dns_server: 10.254.0.10
+dns_server: 172.31.0.50
 
 
 # Amazon Web Services specific options (ignore when running outside AWS).
